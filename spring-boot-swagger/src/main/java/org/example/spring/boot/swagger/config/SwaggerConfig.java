@@ -26,18 +26,17 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo()).enable(true)
                 .select()
-                //apis： 添加swagger接口提取范围
                 .apis(RequestHandlerSelectors.basePackage("org.example.spring.boot.swagger.controller"))
-                //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+//                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("XX项目接口文档")
-                .description("XX项目描述")
-                .contact(new Contact("作者", "作者URL", "作者Email"))
+                .title("spring boot swagger项目接口文档")
+                .description("spring boot 集成 swagger 3.0")
+                .contact(new Contact("fkz", "作者URL", "971434648@qq.com"))
                 .version("1.0")
                 .build();
     }

@@ -1,6 +1,7 @@
 package org.example.spring.boot.swagger.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.example.spring.boot.swagger.entity.UserEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     @ApiOperation("根据id查询用户信息")
+    @ApiImplicitParam(paramType = "path", name = "id", value = "用户id", required = true, dataType = "Long")
     public UserEntity getById(@PathVariable Long id) {
         UserEntity user = new UserEntity();
         user.setId(id);
