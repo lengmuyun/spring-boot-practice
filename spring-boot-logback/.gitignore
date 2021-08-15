@@ -31,9 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+/spring-boot-logback.iml
+/mvnw.cmd
 /mvnw
 /HELP.md
-/spring-boot-swagger.iml
-/mvnw.cmd
 /target/
 /.mvn/
